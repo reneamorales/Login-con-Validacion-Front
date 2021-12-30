@@ -1,0 +1,67 @@
+<!Doctype html>
+<html lang='es-AR'>
+
+<head>
+    <meta charset="utf-8">
+    <title name="titulo">Inicio de sesión</title>
+    <meta name="theme-color" content="red" backcolor="red">
+    <link rel="stylesheet" href="styles-form.css">
+</head>
+
+<body>
+    <div class="container-form">
+        <div class="toggle">
+            <span class="crear-iniciar">Crear cuenta</span>
+        </div>
+
+        <div class="formulario">
+            <h2>Iniciar Sesión</h2>
+            <form action="#" id="form" novalidate>
+
+                <input type="text" class="nombre" id="nombre" placeholder="Nombre de usuario" required>
+
+                <input type="password" class="contrasenia inicio" id="contrasenaI" placeholder="Contraseña" required>
+
+                <span class="contrasenia-inicio" data-activo=false></span>
+
+                <button type="text" class="iniciar" type="submit" value="Iniciar Sesión">Iniciar Sesión</button>
+
+            </form>
+            <div class="reset-password">
+                <a href="# ">Olvidé mi contraseña</a>
+            </div>
+        </div>
+
+
+        <div class="formulario">
+            <h2>Crea tu cuenta</h2>
+            <form action="#" id="form" class="form" novalidate>
+
+                <input type="text" class="username" id="username" placeholder="nombre de usuario" minlength="4" required>
+                <span class="error" aria-live="polite"></span>
+
+                <input type="email" class="email" id="email" placeholder="correo electrónico" minlength="8" name="email" required>
+                <span class="error" aria-live="polite"></span>
+
+                <input type="tel" class="phone" id="phone" placeholder="teléfono" required minlength="10">
+                <span class="error" aria-live="polite"></span>
+
+                <input type="password" class="txtPassword" id="contraseniaC" placeholder="contraseña" required minlength="8" maxlength="16">
+                <span class="error" aria-live="polite"></span>
+
+                <span class="contrasenia1-crear" data-activo=false></span>
+
+                <input type="password" class="contrasenia" id="contrasena_ver" placeholder="repetir contraseña " required>
+                <span class="error" aria-live="polite"></span>
+
+                <button type="text" id="registrar" class="registrar" value="registrarme">Registrarme</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="jquery-3.6.0.min.js "></script>
+    <script type="text/javascript" src="javascript.js "></script>
+
+</body>
