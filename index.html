@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title name="titulo">Inicio de sesión</title>
-    <meta name="theme-color" content="red" backcolor="red">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
     <link rel="stylesheet" href="styles-form.css">
 </head>
 
@@ -16,15 +16,17 @@
 
         <div class="formulario">
             <h2>Iniciar Sesión</h2>
-            <form action="#" id="form" novalidate>
+            <form action="#" class="form" novalidate>
 
                 <input type="text" class="nombre" id="nombre" placeholder="Nombre de usuario" required>
 
-                <input type="password" class="contrasenia inicio" id="contrasenaI" placeholder="Contraseña" required>
+                <input type="password" id="contrasenaI" placeholder="Contraseña" required>
+                <span class="error" arialive="polite"></span>
+                <!-- VISTA DE PASSWORD -->
+                <button type="button" class="mostrar"></button>
+                <span class="contraseniaI" data-activo=false></span>
 
-                <span class="contrasenia-inicio" data-activo=false></span>
-
-                <button type="text" class="iniciar" type="submit" value="Iniciar Sesión">Iniciar Sesión</button>
+                <button type="button" class="iniciar" value="Iniciar Sesión">Iniciar Sesión</button>
 
             </form>
             <div class="reset-password">
@@ -35,7 +37,7 @@
 
         <div class="formulario">
             <h2>Crea tu cuenta</h2>
-            <form action="#" id="form" class="form" novalidate>
+            <form action="#" class="form" novalidate>
 
                 <input type="text" class="username" id="username" placeholder="nombre de usuario" minlength="4" required>
                 <span class="error" aria-live="polite"></span>
@@ -49,16 +51,27 @@
                 <input type="password" class="txtPassword" id="contraseniaC" placeholder="contraseña" required minlength="8" maxlength="16">
                 <span class="error" aria-live="polite"></span>
 
-                <span class="contrasenia1-crear" data-activo=false></span>
+                <button type="text" class="mostrar-password"></button>
 
                 <input type="password" class="contrasenia" id="contrasena_ver" placeholder="repetir contraseña " required>
                 <span class="error" aria-live="polite"></span>
 
-                <button type="text" id="registrar" class="registrar" value="registrarme">Registrarme</button>
+                <button type="button" id="registrar" class="registrar" value="registrarme">Registrarme</button>
 
             </form>
         </div>
 
+    </div>
+    <div class="cont-valid-w3c">
+        <p class="icon-val">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                    alt="¡CSS Válido!" />
+    
+            </a>
+    
+        </p><br>
+        <p id="msj-valid">Código validado con W3C Validator</p>
     </div>
 
     <script type="text/javascript" src="jquery-3.6.0.min.js "></script>
