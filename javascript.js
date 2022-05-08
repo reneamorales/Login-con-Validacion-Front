@@ -63,7 +63,7 @@ function cargarDatos() {
 
 /*img vista iniciar sesion*/
 
-$(".contrasenia-inicio").append('<img class="icon-vista-inicio" src="icons/vista.png">');
+$(".contrasenia-inicio").append('<img class="img-mostrar" src="icons/vista.png">');
 
 
 /*mostrar ocultar-contraseña iniciar sesion*/
