@@ -258,3 +258,17 @@ $('#contrasena_ver').change(function() {
     contrasenia2Error.className = 'error activo';
 
 });
+
+
+/*Mensaje de validacion por W3C*/
+
+$('.cont-valid-w3c').hover(function () {
+    $(this).css('width', '230px')
+    var mensaje = document.getElementById('msj-valid');
+    mensaje.style.display = 'flex';
+}, function() {
+    $(this).css('width', '100px');
+
+    var msjMostrado = document.getElementById('msj-valid');
+    msjMostrado.style.display = 'none';
+});
