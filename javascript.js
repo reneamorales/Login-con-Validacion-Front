@@ -7,7 +7,7 @@ $("input").hover(function() {
 });
 
 
-$('button').hover(function() {
+$('iniciar').hover(function() {
     $(this).css("background", "rgb(245, 161, 35)")
 }, function() {
     $(this).css("background", "rgba(245, 161, 35, .7)");
@@ -31,6 +31,8 @@ $('.toggle').click(function() {
 
     }, "slow");
 })
+
+$(".mostrar").append('<img class="img-mostrar" src="icons/vista.png">');
 
 // confirmacion de registro
 
@@ -66,7 +68,7 @@ $(".contrasenia-inicio").append('<img class="icon-vista-inicio" src="icons/vista
 
 /*mostrar ocultar-contraseña iniciar sesion*/
 
-$(".contrasenia-inicio").click(function() {
+$(".mostrar").click(function() {
     var control = $(this);
     var estatus = control.data('activo');
 
@@ -86,14 +88,14 @@ $(".contrasenia-inicio").click(function() {
 
 /*img vista crear cuenta*/
 
-$(".contrasenia1-crear").append('<img class="icon-vista-crear" src="icons/vista.png">');
+$(".mostrar-password").append('<img class="icon-vista-crear" src="icons/vista.png">');
 
 /*mostrar ocultar-contraseña crear cuenta*/
-$(".contrasenia1-crear").click(function() {
+
+$(".mostrar-password").click(function() {
 
     var control = $(this);
     var estatus = control.data('activo');
-
     var image = control.find('img');
     if (estatus == false) {
 
@@ -107,10 +109,6 @@ $(".contrasenia1-crear").click(function() {
         $("#contraseniaC").attr('type', 'password');
     }
 });
-
-
-/*no funciona si pongo evento en lugar de event */
-
 
 const form = document.getElementsByTagName('form')[1];
 
@@ -237,7 +235,7 @@ $('#username').change(function() {
 $('#contraseniaC').change(function() {
     console.log('hizo un cambio en la contraseña');
     if (contrasenia1.validity.valueMissing) {
-        contrasenia1Error.textContent = 'Debe introducir un nombre de usuario.';
+        contrasenia1Error.textContent = 'Debe introducir una contraseña.';
 
     }
     if (contrasenia1.validity.tooShort) {
@@ -251,9 +249,9 @@ $('#contraseniaC').change(function() {
 $('#contrasena_ver').change(function() {
     console.log('hizo un cambio en contraseña de verificación');
     if (contrasenia2.validity.valueMissing) {
-        contrasenia2Error.textContent = 'Debe introducir un contraseña.';
+        contrasenia2Error.textContent = 'Debe introducir una contraseña de verificación.';
     }
-    if (contrasenia2 != contrasenia1) {
+    if (contrasenia1 != contrasenia2) {
 
         contrasenia2Error.textContent = `Las contraseñas no coinciden.`;
     }
