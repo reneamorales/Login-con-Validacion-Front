@@ -88,7 +88,7 @@ $(".mostrar").click(function() {
 
 /*img vista crear cuenta*/
 
-$(".mostrar-password").append('<img class="icon-vista-crear" src="icons/vista.png">');
+$(".mostrar-password").append('<img class="img-mostrar" src="icons/vista.png">');
 
 /*mostrar ocultar-contraseña crear cuenta*/
 
